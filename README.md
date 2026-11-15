@@ -20,7 +20,7 @@ This report documents a Tier-1 SOC analyst triage procedure for suspicious domai
 * **Analyst Findings:** The target URL was submitted to VirusTotal to cross-reference global vendor security databases. The scan results evaluate whether the domain is associated with known phishing campaigns, malware delivery, or malicious redirects.
 
 ### 2. Evidence
-![VirusTotal Scan Result](screenshot1.png)
+![VirusTotal Scan Result](images/screenshot1.png)
 *Figure 1: VirusTotal Detection Tab showing vendor security verdicts and overall detection ratio.*
 
 ---
@@ -31,7 +31,7 @@ This report documents a Tier-1 SOC analyst triage procedure for suspicious domai
 * **Target Domain:** appspot.com
 * **Analyst Findings:** A WHOIS lookup was performed to analyze domain ownership, registration age, update timestamps, and registrar details. Legitimate domains generally display established registration histories, whereas newly registered domains (NRDs) often correlate with malicious phishing infrastructure.
 
-![WHOIS Lookup Result](screenshot2.png)
+![WHOIS Lookup Result](images/screenshot2.png)
 *Figure 2: WHOIS Lookup details displaying domain registrar and creation timestamps.*
 
 ---
@@ -40,7 +40,7 @@ This report documents a Tier-1 SOC analyst triage procedure for suspicious domai
 * **Target IP Address:** 74.125.137.153 (Google Infrastructure / AppEngine)
 * **Analyst Findings:** The IP address resolved from the target domain was checked against AbuseIPDB's database to review recent report histories, confidence-of-abuse scores, and ISP origin. 
 
-![AbuseIPDB Result](screenshot3.png)
+![AbuseIPDB Result](images/screenshot3.png)
 *Figure 3: AbuseIPDB IP reputation report showing confidence score and reported malicious activity history.*
 
 ---
@@ -54,7 +54,7 @@ Password entropy and brute-force resistance were evaluated using Kaspersky Passw
 * **Test Input:** Admin123!
 * **Assessment:** Low entropy, vulnerable to dictionary attacks and automated brute-force attempts due to predictable word patterns.
 
-![Weak Password Test](screenshot4.png)
+![Weak Password Test](images/screenshot4.png)
 *Figure 4: Kaspersky Password Checker demonstrating short estimated cracking time and potential exposure risks for a weak password.*
 
 ---
@@ -63,7 +63,7 @@ Password entropy and brute-force resistance were evaluated using Kaspersky Passw
 * **Test Input:** xK9#mP!2vL8@qZ5
 * **Assessment:** High entropy combining uppercase letters, lowercase letters, numbers, and special symbols. Highly resistant to offline dictionary and brute-force attacks.
 
-![Strong Password Test](screenshot5.png)
+![Strong Password Test](images/screenshot5.png)
 *Figure 5: Kaspersky Password Checker demonstrating high resistance and extended crack duration for a complex passphrase.*
 
 ---
